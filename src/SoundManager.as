@@ -62,7 +62,7 @@ package
 				(mSoundTable[soundId] as SoundTrack).volume = volume; 
 	 	}
 		
-		public function registerSound(soundFile:String, soundId:String, onComplete:Function):void
+		public function registerSound(soundFile:String, soundId:String, onComplete:Function = null):void
 		{
 			mSoundTable[soundId] = new SoundTrack(new Sound(new URLRequest(soundFile)), onComplete);
 		}
